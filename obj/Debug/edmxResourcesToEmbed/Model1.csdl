@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="euiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="contiss">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="level" Type="Int32" Nullable="false" />
+    <Property Name="step" Type="Int32" />
+    <Property Name="consolidated" Type="Double" Nullable="false" />
+    <Property Name="rent" Type="Double" />
+    <Property Name="hazard" Type="Double" />
+    <Property Name="enhancedWorkAllowance" Type="Double" />
+    <Property Name="con1" Type="Double" />
+    <Property Name="con2" Type="Double" />
+    <Property Name="tenpercent" Type="Double" />
+    <Property Name="applicable" Type="Double" />
+    <Property Name="domesticAllowance" Type="Double" />
+    <NavigationProperty Name="salaryStep" Relationship="Self.contissTOstep" FromRole="contiss" ToRole="salarySteps" />
+    <NavigationProperty Name="employeeContisses" Relationship="Self.econtCont" FromRole="contiss" ToRole="employeeContiss" />
+  </EntityType>
+  <EntityType Name="conuass">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="level" Type="Int32" Nullable="false" />
+    <Property Name="step" Type="Int32" Nullable="false" />
+    <Property Name="consolidated" Type="Single" />
+    <Property Name="rent" Type="Single" />
+    <Property Name="hazard" Type="Single" />
+    <Property Name="enhancedWorkAllowance" Type="Single" />
+    <Property Name="con1" Type="Single" />
+    <Property Name="con2" Type="Single" />
+    <Property Name="tenpercent" Type="Single" />
+    <Property Name="applicable" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="domesticAllowance" Type="Single" />
+    <NavigationProperty Name="salaryStep" Relationship="Self.conuassTOsteps" FromRole="conuass" ToRole="salarySteps" />
+    <NavigationProperty Name="employeeConuasses" Relationship="Self.econCon" FromRole="conuass" ToRole="employeeConuass" />
+  </EntityType>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="departmentID" />
+    </Key>
+    <Property Name="departmentID" Type="Int32" Nullable="false" />
+    <Property Name="departmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="facultyID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="faculty" Relationship="Self.fkDeptfaculty" FromRole="department" ToRole="faculty" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="othername" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tel" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dob" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="soo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nKName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nKTel" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="nKRelationship" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="nKaddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nKEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="employeeConuasses" Relationship="Self.econEm" FromRole="employee" ToRole="employeeConuass" />
+    <NavigationProperty Name="employeeContisses" Relationship="Self.econtEm" FromRole="employee" ToRole="employeeContiss" />
+    <NavigationProperty Name="employeeLevels" Relationship="Self.levelToEmp" FromRole="employee" ToRole="employeeLevel" />
+  </EntityType>
+  <EntityType Name="employeeContiss">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employeeID" Type="Int32" Nullable="false" />
+    <Property Name="contissID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="contiss" Relationship="Self.econtCont" FromRole="employeeContiss" ToRole="contiss" />
+    <NavigationProperty Name="employee" Relationship="Self.econtEm" FromRole="employeeContiss" ToRole="employee" />
+  </EntityType>
+  <EntityType Name="employeeConuass">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employeeID" Type="Int32" Nullable="false" />
+    <Property Name="conuassID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="conuass" Relationship="Self.econCon" FromRole="employeeConuass" ToRole="conuass" />
+    <NavigationProperty Name="employee" Relationship="Self.econEm" FromRole="employeeConuass" ToRole="employee" />
+  </EntityType>
+  <EntityType Name="employeeLevel">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employeeID" Type="Int32" Nullable="false" />
+    <Property Name="levelID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="employee" Relationship="Self.levelToEmp" FromRole="employeeLevel" ToRole="employee" />
+    <NavigationProperty Name="level" Relationship="Self.levelToLevel" FromRole="employeeLevel" ToRole="level" />
+  </EntityType>
+  <EntityType Name="faculty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="FacultyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="departments" Relationship="Self.fkDeptfaculty" FromRole="faculty" ToRole="department" />
+  </EntityType>
+  <EntityType Name="level">
+    <Key>
+      <PropertyRef Name="levelID" />
+    </Key>
+    <Property Name="levelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="levelname" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="employeeLevels" Relationship="Self.levelToLevel" FromRole="level" ToRole="employeeLevel" />
+  </EntityType>
+  <EntityType Name="salaryStep">
+    <Key>
+      <PropertyRef Name="stepname" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stepname" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="contisses" Relationship="Self.contissTOstep" FromRole="salarySteps" ToRole="contiss" />
+    <NavigationProperty Name="conuasses" Relationship="Self.conuassTOsteps" FromRole="salarySteps" ToRole="conuass" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="contissTOstep">
+    <End Role="salarySteps" Type="Self.salaryStep" Multiplicity="0..1" />
+    <End Role="contiss" Type="Self.contiss" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="salarySteps">
+        <PropertyRef Name="stepname" />
+      </Principal>
+      <Dependent Role="contiss">
+        <PropertyRef Name="step" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="econtCont">
+    <End Role="contiss" Type="Self.contiss" Multiplicity="1" />
+    <End Role="employeeContiss" Type="Self.employeeContiss" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contiss">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="employeeContiss">
+        <PropertyRef Name="contissID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="conuassTOsteps">
+    <End Role="salarySteps" Type="Self.salaryStep" Multiplicity="1" />
+    <End Role="conuass" Type="Self.conuass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="salarySteps">
+        <PropertyRef Name="stepname" />
+      </Principal>
+      <Dependent Role="conuass">
+        <PropertyRef Name="step" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="econCon">
+    <End Role="conuass" Type="Self.conuass" Multiplicity="1" />
+    <End Role="employeeConuass" Type="Self.employeeConuass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="conuass">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="employeeConuass">
+        <PropertyRef Name="conuassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkDeptfaculty">
+    <End Role="faculty" Type="Self.faculty" Multiplicity="1" />
+    <End Role="department" Type="Self.department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="faculty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="department">
+        <PropertyRef Name="facultyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="econEm">
+    <End Role="employee" Type="Self.employee" Multiplicity="1" />
+    <End Role="employeeConuass" Type="Self.employeeConuass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="employeeConuass">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="econtEm">
+    <End Role="employee" Type="Self.employee" Multiplicity="1" />
+    <End Role="employeeContiss" Type="Self.employeeContiss" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="employeeContiss">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="levelToEmp">
+    <End Role="employee" Type="Self.employee" Multiplicity="1" />
+    <End Role="employeeLevel" Type="Self.employeeLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="employeeLevel">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="levelToLevel">
+    <End Role="level" Type="Self.level" Multiplicity="1" />
+    <End Role="employeeLevel" Type="Self.employeeLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="level">
+        <PropertyRef Name="levelID" />
+      </Principal>
+      <Dependent Role="employeeLevel">
+        <PropertyRef Name="levelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="euiEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="contisses" EntityType="Self.contiss" />
+    <EntitySet Name="conuasses" EntityType="Self.conuass" />
+    <EntitySet Name="departments" EntityType="Self.department" />
+    <EntitySet Name="employees" EntityType="Self.employee" />
+    <EntitySet Name="employeeContisses" EntityType="Self.employeeContiss" />
+    <EntitySet Name="employeeConuasses" EntityType="Self.employeeConuass" />
+    <EntitySet Name="employeeLevels" EntityType="Self.employeeLevel" />
+    <EntitySet Name="faculties" EntityType="Self.faculty" />
+    <EntitySet Name="levels" EntityType="Self.level" />
+    <EntitySet Name="salarySteps" EntityType="Self.salaryStep" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <AssociationSet Name="contissTOstep" Association="Self.contissTOstep">
+      <End Role="salarySteps" EntitySet="salarySteps" />
+      <End Role="contiss" EntitySet="contisses" />
+    </AssociationSet>
+    <AssociationSet Name="econtCont" Association="Self.econtCont">
+      <End Role="contiss" EntitySet="contisses" />
+      <End Role="employeeContiss" EntitySet="employeeContisses" />
+    </AssociationSet>
+    <AssociationSet Name="conuassTOsteps" Association="Self.conuassTOsteps">
+      <End Role="salarySteps" EntitySet="salarySteps" />
+      <End Role="conuass" EntitySet="conuasses" />
+    </AssociationSet>
+    <AssociationSet Name="econCon" Association="Self.econCon">
+      <End Role="conuass" EntitySet="conuasses" />
+      <End Role="employeeConuass" EntitySet="employeeConuasses" />
+    </AssociationSet>
+    <AssociationSet Name="fkDeptfaculty" Association="Self.fkDeptfaculty">
+      <End Role="faculty" EntitySet="faculties" />
+      <End Role="department" EntitySet="departments" />
+    </AssociationSet>
+    <AssociationSet Name="econEm" Association="Self.econEm">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="employeeConuass" EntitySet="employeeConuasses" />
+    </AssociationSet>
+    <AssociationSet Name="econtEm" Association="Self.econtEm">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="employeeContiss" EntitySet="employeeContisses" />
+    </AssociationSet>
+    <AssociationSet Name="levelToEmp" Association="Self.levelToEmp">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="employeeLevel" EntitySet="employeeLevels" />
+    </AssociationSet>
+    <AssociationSet Name="levelToLevel" Association="Self.levelToLevel">
+      <End Role="level" EntitySet="levels" />
+      <End Role="employeeLevel" EntitySet="employeeLevels" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

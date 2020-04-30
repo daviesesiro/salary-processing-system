@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="euiModelStoreContainer" CdmEntityContainer="EUIm">
+    <EntitySetMapping Name="accountants">
+      <EntityTypeMapping TypeName="euiModel.accountant">
+        <MappingFragment StoreEntitySet="accountant">
+          <ScalarProperty Name="employeeID" ColumnName="employeeID" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contisses">
+      <EntityTypeMapping TypeName="euiModel.contiss">
+        <MappingFragment StoreEntitySet="contiss">
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="pension" ColumnName="pension" />
+          <ScalarProperty Name="responsibilityAllowance" ColumnName="responsibilityAllowance" />
+          <ScalarProperty Name="applicable" ColumnName="applicable" />
+          <ScalarProperty Name="bonus" ColumnName="bonus" />
+          <ScalarProperty Name="con2" ColumnName="con2" />
+          <ScalarProperty Name="con1" ColumnName="con1" />
+          <ScalarProperty Name="eWA" ColumnName="eWA" />
+          <ScalarProperty Name="hazard" ColumnName="hazard" />
+          <ScalarProperty Name="rent" ColumnName="rent" />
+          <ScalarProperty Name="consolidated" ColumnName="consolidated" />
+          <ScalarProperty Name="step" ColumnName="step" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contractors">
+      <EntityTypeMapping TypeName="euiModel.Contractor">
+        <MappingFragment StoreEntitySet="Contractor">
+          <ScalarProperty Name="hourly" ColumnName="hourly" />
+          <ScalarProperty Name="employeeID" ColumnName="employeeID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conuasses">
+      <EntityTypeMapping TypeName="euiModel.Conuass">
+        <MappingFragment StoreEntitySet="Conuass">
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="pension" ColumnName="pension" />
+          <ScalarProperty Name="responsibilityAllowance" ColumnName="responsibilityAllowance" />
+          <ScalarProperty Name="applicable" ColumnName="applicable" />
+          <ScalarProperty Name="bonus" ColumnName="bonus" />
+          <ScalarProperty Name="con2" ColumnName="con2" />
+          <ScalarProperty Name="con1" ColumnName="con1" />
+          <ScalarProperty Name="eWA" ColumnName="eWA" />
+          <ScalarProperty Name="hazard" ColumnName="hazard" />
+          <ScalarProperty Name="rent" ColumnName="rent" />
+          <ScalarProperty Name="consolidated" ColumnName="consolidated" />
+          <ScalarProperty Name="step" ColumnName="step" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="departments">
+      <EntityTypeMapping TypeName="euiModel.department">
+        <MappingFragment StoreEntitySet="department">
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="facultyId" ColumnName="facultyId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emContisses">
+      <EntityTypeMapping TypeName="euiModel.emContiss">
+        <MappingFragment StoreEntitySet="emContiss">
+          <ScalarProperty Name="employeeID" ColumnName="employeeID" />
+          <ScalarProperty Name="contissID" ColumnName="contissID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emConuasses">
+      <EntityTypeMapping TypeName="euiModel.emConuass">
+        <MappingFragment StoreEntitySet="emConuass">
+          <ScalarProperty Name="conuassID" ColumnName="conuassID" />
+          <ScalarProperty Name="employeeID" ColumnName="employeeID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emlevels">
+      <EntityTypeMapping TypeName="euiModel.emlevel">
+        <MappingFragment StoreEntitySet="emlevel">
+          <ScalarProperty Name="levelid" ColumnName="levelid" />
+          <ScalarProperty Name="employeeid" ColumnName="employeeid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employees">
+      <EntityTypeMapping TypeName="euiModel.employee">
+        <MappingFragment StoreEntitySet="employee">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="departmentID" ColumnName="departmentID" />
+          <ScalarProperty Name="nKEmail" ColumnName="nKEmail" />
+          <ScalarProperty Name="nKaddress" ColumnName="nKaddress" />
+          <ScalarProperty Name="nKRelationship" ColumnName="nKRelationship" />
+          <ScalarProperty Name="nKTel" ColumnName="nKTel" />
+          <ScalarProperty Name="nKName" ColumnName="nKName" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="othername" ColumnName="othername" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emranks">
+      <EntityTypeMapping TypeName="euiModel.emrank">
+        <MappingFragment StoreEntitySet="emrank">
+          <ScalarProperty Name="rankid" ColumnName="rankid" />
+          <ScalarProperty Name="employeeid" ColumnName="employeeid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emSteps">
+      <EntityTypeMapping TypeName="euiModel.emStep">
+        <MappingFragment StoreEntitySet="emStep">
+          <ScalarProperty Name="employeeID" ColumnName="employeeID" />
+          <ScalarProperty Name="stepid" ColumnName="stepid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="faculties">
+      <EntityTypeMapping TypeName="euiModel.faculty">
+        <MappingFragment StoreEntitySet="faculty">
+          <ScalarProperty Name="FacultyName" ColumnName="FacultyName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="levels">
+      <EntityTypeMapping TypeName="euiModel.level">
+        <MappingFragment StoreEntitySet="level">
+          <ScalarProperty Name="levelname" ColumnName="levelname" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nCONTISSes">
+      <EntityTypeMapping TypeName="euiModel.nCONTISS">
+        <MappingFragment StoreEntitySet="nCONTISS">
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="pension" ColumnName="pension" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="OA" ColumnName="OA" />
+          <ScalarProperty Name="hazard" ColumnName="hazard" />
+          <ScalarProperty Name="basicSalary" ColumnName="basicSalary" />
+          <ScalarProperty Name="step" ColumnName="step" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nCONUASSes">
+      <EntityTypeMapping TypeName="euiModel.nCONUASS">
+        <MappingFragment StoreEntitySet="nCONUASS">
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="pension" ColumnName="pension" />
+          <ScalarProperty Name="responsibilityAllowance" ColumnName="responsibilityAllowance" />
+          <ScalarProperty Name="EWA" ColumnName="EWA" />
+          <ScalarProperty Name="hazard" ColumnName="hazard" />
+          <ScalarProperty Name="basicSalary" ColumnName="basicSalary" />
+          <ScalarProperty Name="step" ColumnName="step" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="payslips">
+      <EntityTypeMapping TypeName="euiModel.payslip">
+        <MappingFragment StoreEntitySet="payslip">
+          <ScalarProperty Name="salaryid" ColumnName="salaryid" />
+          <ScalarProperty Name="employeeID" ColumnName="employeeID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ranks">
+      <EntityTypeMapping TypeName="euiModel.rank">
+        <MappingFragment StoreEntitySet="ranks">
+          <ScalarProperty Name="rankName" ColumnName="rankName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salaries">
+      <EntityTypeMapping TypeName="euiModel.Salary">
+        <MappingFragment StoreEntitySet="Salary">
+          <ScalarProperty Name="bonus" ColumnName="bonus" />
+          <ScalarProperty Name="HW" ColumnName="HW" />
+          <ScalarProperty Name="RA" ColumnName="RA" />
+          <ScalarProperty Name="HA" ColumnName="HA" />
+          <ScalarProperty Name="OA" ColumnName="OA" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="EWA" ColumnName="EWA" />
+          <ScalarProperty Name="salary1" ColumnName="salary" />
+          <ScalarProperty Name="employeeid" ColumnName="employeeid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="salaryContractors">
+      <EntityTypeMapping TypeName="euiModel.salaryContractor">
+        <MappingFragment StoreEntitySet="salaryContractor">
+          <ScalarProperty Name="bonus" ColumnName="bonus" />
+          <ScalarProperty Name="pay" ColumnName="pay" />
+          <ScalarProperty Name="hoursWorked" ColumnName="hoursWorked" />
+          <ScalarProperty Name="contractorID" ColumnName="contractorID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="steps">
+      <EntityTypeMapping TypeName="euiModel.step">
+        <MappingFragment StoreEntitySet="step">
+          <ScalarProperty Name="stepname" ColumnName="stepname" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

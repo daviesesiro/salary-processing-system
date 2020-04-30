@@ -1,0 +1,15 @@
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Release\AutomatedSalaryProcessingSystem.exe.config
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Release\AutomatedSalaryProcessingSystem.exe
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Release\AutomatedSalaryProcessingSystem.pdb
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Release\EntityFramework.dll
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Release\EntityFramework.xml
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Release\AutomatedSalaryProcessingSystem.contractorForm.resources
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Release\AutomatedSalaryProcessingSystem.Fixed_salaryForm.resources
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Release\AutomatedSalaryProcessingSystem.Index.resources
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Release\AutomatedSalaryProcessingSystem.login.resources
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Release\AutomatedSalaryProcessingSystem.Properties.Resources.resources
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Release\AutomatedSalaryProcessingSystem.csproj.GenerateResource.Cache
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Release\AutomatedSalaryProcessingSystem.exe
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Release\AutomatedSalaryProcessingSystem.pdb

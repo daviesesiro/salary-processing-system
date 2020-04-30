@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="be0fa46e33f443fdadc3706d5efad899" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="euiModel.accountant" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="euiModel.contiss" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="euiModel.Contractor" Width="1.5" PointX="7.5" PointY="26.625" />
+        <EntityTypeShape EntityType="euiModel.Conuass" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="euiModel.department" Width="1.5" PointX="3" PointY="12.25" />
+        <EntityTypeShape EntityType="euiModel.emContiss" Width="1.5" PointX="7.5" PointY="12.25" />
+        <EntityTypeShape EntityType="euiModel.emConuass" Width="1.5" PointX="7.5" PointY="15.25" />
+        <EntityTypeShape EntityType="euiModel.emlevel" Width="1.5" PointX="10.5" PointY="12.25" />
+        <EntityTypeShape EntityType="euiModel.employee" Width="1.5" PointX="5.25" PointY="10.25" />
+        <EntityTypeShape EntityType="euiModel.emrank" Width="1.5" PointX="7.5" PointY="9.25" />
+        <EntityTypeShape EntityType="euiModel.emStep" Width="1.5" PointX="10.5" PointY="9.25" />
+        <EntityTypeShape EntityType="euiModel.faculty" Width="1.5" PointX="0.75" PointY="12.5" />
+        <EntityTypeShape EntityType="euiModel.level" Width="1.5" PointX="8.25" PointY="3.5" />
+        <EntityTypeShape EntityType="euiModel.nCONTISS" Width="1.5" PointX="5.25" PointY="17.75" />
+        <EntityTypeShape EntityType="euiModel.nCONUASS" Width="1.5" PointX="5.25" PointY="21.75" />
+        <EntityTypeShape EntityType="euiModel.payslip" Width="1.5" PointX="9.75" PointY="20.5" />
+        <EntityTypeShape EntityType="euiModel.rank" Width="1.5" PointX="5.25" PointY="7.5" />
+        <EntityTypeShape EntityType="euiModel.Salary" Width="1.5" PointX="7.5" PointY="29.5" />
+        <EntityTypeShape EntityType="euiModel.salaryContractor" Width="1.5" PointX="9.75" PointY="26.5" />
+        <EntityTypeShape EntityType="euiModel.step" Width="1.5" PointX="8.25" PointY="6.5" />
+        <AssociationConnector Association="euiModel.conidS" />
+        <AssociationConnector Association="euiModel.emCID" />
+        <AssociationConnector Association="euiModel.dpID" />
+        <AssociationConnector Association="euiModel.faID" />
+        <AssociationConnector Association="euiModel.conID" />
+        <AssociationConnector Association="euiModel.emID" />
+        <AssociationConnector Association="euiModel.conConid" />
+        <AssociationConnector Association="euiModel.emEMid" />
+        <AssociationConnector Association="euiModel.emidemlevel" />
+        <AssociationConnector Association="euiModel.levevlid" />
+        <AssociationConnector Association="euiModel.emidpayslip" />
+        <AssociationConnector Association="euiModel.emIDsal" />
+        <AssociationConnector Association="euiModel.empid" />
+        <AssociationConnector Association="euiModel.empidid" />
+        <AssociationConnector Association="euiModel.rankIDr" />
+        <AssociationConnector Association="euiModel.stepidid" />
+        <AssociationConnector Association="euiModel.salid" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

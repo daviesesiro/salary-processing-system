@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="euiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EUIm" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="accountants" EntityType="euiModel.accountant" />
+    <EntitySet Name="contisses" EntityType="euiModel.contiss" />
+    <EntitySet Name="Contractors" EntityType="euiModel.Contractor" />
+    <EntitySet Name="Conuasses" EntityType="euiModel.Conuass" />
+    <EntitySet Name="departments" EntityType="euiModel.department" />
+    <EntitySet Name="emContisses" EntityType="euiModel.emContiss" />
+    <EntitySet Name="emConuasses" EntityType="euiModel.emConuass" />
+    <EntitySet Name="emlevels" EntityType="euiModel.emlevel" />
+    <EntitySet Name="employees" EntityType="euiModel.employee" />
+    <EntitySet Name="emranks" EntityType="euiModel.emrank" />
+    <EntitySet Name="emSteps" EntityType="euiModel.emStep" />
+    <EntitySet Name="faculties" EntityType="euiModel.faculty" />
+    <EntitySet Name="levels" EntityType="euiModel.level" />
+    <EntitySet Name="nCONTISSes" EntityType="euiModel.nCONTISS" />
+    <EntitySet Name="nCONUASSes" EntityType="euiModel.nCONUASS" />
+    <EntitySet Name="payslips" EntityType="euiModel.payslip" />
+    <EntitySet Name="ranks" EntityType="euiModel.rank" />
+    <EntitySet Name="Salaries" EntityType="euiModel.Salary" />
+    <EntitySet Name="salaryContractors" EntityType="euiModel.salaryContractor" />
+    <EntitySet Name="steps" EntityType="euiModel.step" />
+    <AssociationSet Name="conidS" Association="euiModel.conidS">
+      <End Role="Contractor" EntitySet="Contractors" />
+      <End Role="salaryContractor" EntitySet="salaryContractors" />
+    </AssociationSet>
+    <AssociationSet Name="emCID" Association="euiModel.emCID">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="Contractor" EntitySet="Contractors" />
+    </AssociationSet>
+    <AssociationSet Name="dpID" Association="euiModel.dpID">
+      <End Role="department" EntitySet="departments" />
+      <End Role="employee" EntitySet="employees" />
+    </AssociationSet>
+    <AssociationSet Name="faID" Association="euiModel.faID">
+      <End Role="faculty" EntitySet="faculties" />
+      <End Role="department" EntitySet="departments" />
+    </AssociationSet>
+    <AssociationSet Name="conID" Association="euiModel.conID">
+      <End Role="nCONTISS" EntitySet="nCONTISSes" />
+      <End Role="emContiss" EntitySet="emContisses" />
+    </AssociationSet>
+    <AssociationSet Name="emID" Association="euiModel.emID">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="emContiss" EntitySet="emContisses" />
+    </AssociationSet>
+    <AssociationSet Name="conConid" Association="euiModel.conConid">
+      <End Role="nCONUASS" EntitySet="nCONUASSes" />
+      <End Role="emConuass" EntitySet="emConuasses" />
+    </AssociationSet>
+    <AssociationSet Name="emEMid" Association="euiModel.emEMid">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="emConuass" EntitySet="emConuasses" />
+    </AssociationSet>
+    <AssociationSet Name="emidemlevel" Association="euiModel.emidemlevel">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="emlevel" EntitySet="emlevels" />
+    </AssociationSet>
+    <AssociationSet Name="levevlid" Association="euiModel.levevlid">
+      <End Role="level" EntitySet="levels" />
+      <End Role="emlevel" EntitySet="emlevels" />
+    </AssociationSet>
+    <AssociationSet Name="emidpayslip" Association="euiModel.emidpayslip">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="payslip" EntitySet="payslips" />
+    </AssociationSet>
+    <AssociationSet Name="emIDsal" Association="euiModel.emIDsal">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="Salary" EntitySet="Salaries" />
+    </AssociationSet>
+    <AssociationSet Name="empid" Association="euiModel.empid">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="emrank" EntitySet="emranks" />
+    </AssociationSet>
+    <AssociationSet Name="empidid" Association="euiModel.empidid">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="emStep" EntitySet="emSteps" />
+    </AssociationSet>
+    <AssociationSet Name="rankIDr" Association="euiModel.rankIDr">
+      <End Role="rank" EntitySet="ranks" />
+      <End Role="emrank" EntitySet="emranks" />
+    </AssociationSet>
+    <AssociationSet Name="stepidid" Association="euiModel.stepidid">
+      <End Role="step" EntitySet="steps" />
+      <End Role="emStep" EntitySet="emSteps" />
+    </AssociationSet>
+    <AssociationSet Name="salid" Association="euiModel.salid">
+      <End Role="Salary" EntitySet="Salaries" />
+      <End Role="payslip" EntitySet="payslips" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="accountant">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="employeeID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="contiss">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="level" Type="Int32" />
+    <Property Name="step" Type="Int32" />
+    <Property Name="consolidated" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="rent" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="hazard" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="eWA" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="con1" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="con2" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="bonus" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="applicable" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="responsibilityAllowance" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="pension" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="tax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="total" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Contractor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employeeID" Type="Int32" />
+    <Property Name="hourly" Type="Single" />
+    <NavigationProperty Name="salaryContractors" Relationship="euiModel.conidS" FromRole="Contractor" ToRole="salaryContractor" />
+    <NavigationProperty Name="employee" Relationship="euiModel.emCID" FromRole="Contractor" ToRole="employee" />
+  </EntityType>
+  <EntityType Name="Conuass">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="level" Type="Int32" />
+    <Property Name="step" Type="Int32" />
+    <Property Name="consolidated" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="rent" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="hazard" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="eWA" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="con1" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="con2" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="bonus" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="applicable" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="responsibilityAllowance" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="pension" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="tax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="total" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="facultyId" Type="Int32" />
+    <Property Name="departmentName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="employees" Relationship="euiModel.dpID" FromRole="department" ToRole="employee" />
+    <NavigationProperty Name="faculty" Relationship="euiModel.faID" FromRole="department" ToRole="faculty" />
+  </EntityType>
+  <EntityType Name="emContiss">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="contissID" Type="Int32" Nullable="false" />
+    <Property Name="employeeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="nCONTISS" Relationship="euiModel.conID" FromRole="emContiss" ToRole="nCONTISS" />
+    <NavigationProperty Name="employee" Relationship="euiModel.emID" FromRole="emContiss" ToRole="employee" />
+  </EntityType>
+  <EntityType Name="emConuass">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employeeID" Type="Int32" Nullable="false" />
+    <Property Name="conuassID" Type="Int32" />
+    <NavigationProperty Name="nCONUASS" Relationship="euiModel.conConid" FromRole="emConuass" ToRole="nCONUASS" />
+    <NavigationProperty Name="employee" Relationship="euiModel.emEMid" FromRole="emConuass" ToRole="employee" />
+  </EntityType>
+  <EntityType Name="emlevel">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employeeid" Type="Int32" />
+    <Property Name="levelid" Type="Int32" />
+    <NavigationProperty Name="employee" Relationship="euiModel.emidemlevel" FromRole="emlevel" ToRole="employee" />
+    <NavigationProperty Name="level" Relationship="euiModel.levevlid" FromRole="emlevel" ToRole="level" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="othername" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tel" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nKName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nKTel" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="nKRelationship" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="nKaddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nKEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="departmentID" Type="Int32" />
+    <Property Name="category" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Precision="0" />
+    <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Contractors" Relationship="euiModel.emCID" FromRole="employee" ToRole="Contractor" />
+    <NavigationProperty Name="department" Relationship="euiModel.dpID" FromRole="employee" ToRole="department" />
+    <NavigationProperty Name="emContisses" Relationship="euiModel.emID" FromRole="employee" ToRole="emContiss" />
+    <NavigationProperty Name="emConuasses" Relationship="euiModel.emEMid" FromRole="employee" ToRole="emConuass" />
+    <NavigationProperty Name="emlevels" Relationship="euiModel.emidemlevel" FromRole="employee" ToRole="emlevel" />
+    <NavigationProperty Name="payslips" Relationship="euiModel.emidpayslip" FromRole="employee" ToRole="payslip" />
+    <NavigationProperty Name="Salaries" Relationship="euiModel.emIDsal" FromRole="employee" ToRole="Salary" />
+    <NavigationProperty Name="emranks" Relationship="euiModel.empid" FromRole="employee" ToRole="emrank" />
+    <NavigationProperty Name="emSteps" Relationship="euiModel.empidid" FromRole="employee" ToRole="emStep" />
+  </EntityType>
+  <EntityType Name="emrank">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employeeid" Type="Int32" Nullable="false" />
+    <Property Name="rankid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="employee" Relationship="euiModel.empid" FromRole="emrank" ToRole="employee" />
+    <NavigationProperty Name="rank" Relationship="euiModel.rankIDr" FromRole="emrank" ToRole="rank" />
+  </EntityType>
+  <EntityType Name="emStep">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stepid" Type="Int32" />
+    <Property Name="employeeID" Type="Int32" />
+    <NavigationProperty Name="employee" Relationship="euiModel.empidid" FromRole="emStep" ToRole="employee" />
+    <NavigationProperty Name="step" Relationship="euiModel.stepidid" FromRole="emStep" ToRole="step" />
+  </EntityType>
+  <EntityType Name="faculty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="FacultyName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="departments" Relationship="euiModel.faID" FromRole="faculty" ToRole="department" />
+  </EntityType>
+  <EntityType Name="level">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="levelname" Type="Int32" />
+    <NavigationProperty Name="emlevels" Relationship="euiModel.levevlid" FromRole="level" ToRole="emlevel" />
+  </EntityType>
+  <EntityType Name="nCONTISS">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="level" Type="Int32" />
+    <Property Name="step" Type="Int32" />
+    <Property Name="basicSalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="hazard" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OA" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="tax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="pension" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="total" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="emContisses" Relationship="euiModel.conID" FromRole="nCONTISS" ToRole="emContiss" />
+  </EntityType>
+  <EntityType Name="nCONUASS">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="level" Type="Int32" />
+    <Property Name="step" Type="Int32" />
+    <Property Name="basicSalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="hazard" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="EWA" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="responsibilityAllowance" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="pension" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="tax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="total" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="emConuasses" Relationship="euiModel.conConid" FromRole="nCONUASS" ToRole="emConuass" />
+  </EntityType>
+  <EntityType Name="payslip">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employeeID" Type="Int32" Nullable="false" />
+    <Property Name="salaryid" Type="Int32" />
+    <NavigationProperty Name="employee" Relationship="euiModel.emidpayslip" FromRole="payslip" ToRole="employee" />
+    <NavigationProperty Name="Salary" Relationship="euiModel.salid" FromRole="payslip" ToRole="Salary" />
+  </EntityType>
+  <EntityType Name="rank">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="rankName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="emranks" Relationship="euiModel.rankIDr" FromRole="rank" ToRole="emrank" />
+  </EntityType>
+  <EntityType Name="Salary">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employeeid" Type="Int32" Nullable="false" />
+    <Property Name="salary1" Type="Single" />
+    <Property Name="EWA" Type="Single" />
+    <Property Name="total" Type="Single" />
+    <Property Name="OA" Type="Single" />
+    <Property Name="HA" Type="Single" />
+    <Property Name="RA" Type="Single" />
+    <Property Name="HW" Type="Single" />
+    <Property Name="bonus" Type="Single" />
+    <NavigationProperty Name="employee" Relationship="euiModel.emIDsal" FromRole="Salary" ToRole="employee" />
+    <NavigationProperty Name="payslips" Relationship="euiModel.salid" FromRole="Salary" ToRole="payslip" />
+  </EntityType>
+  <EntityType Name="salaryContractor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="contractorID" Type="Int32" Nullable="false" />
+    <Property Name="hoursWorked" Type="Int32" Nullable="false" />
+    <Property Name="pay" Type="Single" Nullable="false" />
+    <Property Name="bonus" Type="Single" />
+    <NavigationProperty Name="Contractor" Relationship="euiModel.conidS" FromRole="salaryContractor" ToRole="Contractor" />
+  </EntityType>
+  <EntityType Name="step">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stepname" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="emSteps" Relationship="euiModel.stepidid" FromRole="step" ToRole="emStep" />
+  </EntityType>
+  <Association Name="conidS">
+    <End Type="euiModel.Contractor" Role="Contractor" Multiplicity="1" />
+    <End Type="euiModel.salaryContractor" Role="salaryContractor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contractor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="salaryContractor">
+        <PropertyRef Name="contractorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emCID">
+    <End Type="euiModel.employee" Role="employee" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="euiModel.Contractor" Role="Contractor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Contractor">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="dpID">
+    <End Type="euiModel.department" Role="department" Multiplicity="0..1" />
+    <End Type="euiModel.employee" Role="employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="employee">
+        <PropertyRef Name="departmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="faID">
+    <End Type="euiModel.faculty" Role="faculty" Multiplicity="0..1" />
+    <End Type="euiModel.department" Role="department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="faculty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="department">
+        <PropertyRef Name="facultyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="conID">
+    <End Type="euiModel.nCONTISS" Role="nCONTISS" Multiplicity="1" />
+    <End Type="euiModel.emContiss" Role="emContiss" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nCONTISS">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emContiss">
+        <PropertyRef Name="contissID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emID">
+    <End Type="euiModel.employee" Role="employee" Multiplicity="1" />
+    <End Type="euiModel.emContiss" Role="emContiss" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emContiss">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="conConid">
+    <End Type="euiModel.nCONUASS" Role="nCONUASS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="euiModel.emConuass" Role="emConuass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nCONUASS">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emConuass">
+        <PropertyRef Name="conuassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emEMid">
+    <End Type="euiModel.employee" Role="employee" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="euiModel.emConuass" Role="emConuass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emConuass">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emidemlevel">
+    <End Type="euiModel.employee" Role="employee" Multiplicity="0..1" />
+    <End Type="euiModel.emlevel" Role="emlevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emlevel">
+        <PropertyRef Name="employeeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="levevlid">
+    <End Type="euiModel.level" Role="level" Multiplicity="0..1" />
+    <End Type="euiModel.emlevel" Role="emlevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="level">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emlevel">
+        <PropertyRef Name="levelid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emidpayslip">
+    <End Type="euiModel.employee" Role="employee" Multiplicity="1" />
+    <End Type="euiModel.payslip" Role="payslip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="payslip">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emIDsal">
+    <End Type="euiModel.employee" Role="employee" Multiplicity="1" />
+    <End Type="euiModel.Salary" Role="Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Salary">
+        <PropertyRef Name="employeeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="empid">
+    <End Type="euiModel.employee" Role="employee" Multiplicity="1" />
+    <End Type="euiModel.emrank" Role="emrank" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emrank">
+        <PropertyRef Name="employeeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="empidid">
+    <End Type="euiModel.employee" Role="employee" Multiplicity="0..1" />
+    <End Type="euiModel.emStep" Role="emStep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emStep">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="rankIDr">
+    <End Type="euiModel.rank" Role="rank" Multiplicity="1" />
+    <End Type="euiModel.emrank" Role="emrank" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rank">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emrank">
+        <PropertyRef Name="rankid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="stepidid">
+    <End Type="euiModel.step" Role="step" Multiplicity="0..1" />
+    <End Type="euiModel.emStep" Role="emStep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="step">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emStep">
+        <PropertyRef Name="stepid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="salid">
+    <End Type="euiModel.Salary" Role="Salary" Multiplicity="0..1" />
+    <End Type="euiModel.payslip" Role="payslip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salary">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="payslip">
+        <PropertyRef Name="salaryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,31 @@
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.ContractorForm.resources
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.frmPayslip.resources
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.processSalary.resources
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.Fixed_salaryForm.resources
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.Index.resources
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.login.resources
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.Properties.Resources.resources
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.viewEmployee.resources
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.csproj.GenerateResource.Cache
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\RdlCompile.cache
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\RdlCompile.compiled
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Debug\AutomatedSalaryProcessingSystem.exe.config
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Debug\AutomatedSalaryProcessingSystem.exe
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Debug\AutomatedSalaryProcessingSystem.pdb
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Debug\EntityFramework.dll
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Debug\EntityFramework.xml
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.exe
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.pdb
+C:\Users\ESIRO\desktop\projects\projectNwa\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.csprojResolveAssemblyReference.cache
+C:\Users\H\Desktop\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Debug\AutomatedSalaryProcessingSystem.exe.config
+C:\Users\H\Desktop\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.exe
+C:\Users\H\Desktop\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.pdb
+D:\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Debug\AutomatedSalaryProcessingSystem.exe.config
+D:\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.exe
+D:\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.pdb
+C:\Users\Davies Esiro\Documents\Salary Processing System\AutomatedSalaryProcessingSystem\bin\Debug\AutomatedSalaryProcessingSystem.exe.config
+C:\Users\Davies Esiro\Documents\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.exe
+C:\Users\Davies Esiro\Documents\Salary Processing System\AutomatedSalaryProcessingSystem\obj\Debug\AutomatedSalaryProcessingSystem.pdb

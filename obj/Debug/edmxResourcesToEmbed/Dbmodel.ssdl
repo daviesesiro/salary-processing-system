@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="euiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="accountant">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="employeeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="contiss">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="level" Type="int" />
+    <Property Name="step" Type="int" />
+    <Property Name="consolidated" Type="money" />
+    <Property Name="rent" Type="money" />
+    <Property Name="hazard" Type="money" />
+    <Property Name="eWA" Type="money" />
+    <Property Name="con1" Type="money" />
+    <Property Name="con2" Type="money" />
+    <Property Name="bonus" Type="money" />
+    <Property Name="applicable" Type="money" />
+    <Property Name="responsibilityAllowance" Type="money" />
+    <Property Name="pension" Type="money" />
+    <Property Name="tax" Type="money" />
+    <Property Name="total" Type="money" />
+  </EntityType>
+  <EntityType Name="Contractor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employeeID" Type="int" />
+    <Property Name="hourly" Type="real" />
+  </EntityType>
+  <EntityType Name="Conuass">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="level" Type="int" />
+    <Property Name="step" Type="int" />
+    <Property Name="consolidated" Type="money" />
+    <Property Name="rent" Type="money" />
+    <Property Name="hazard" Type="money" />
+    <Property Name="eWA" Type="money" />
+    <Property Name="con1" Type="money" />
+    <Property Name="con2" Type="money" />
+    <Property Name="bonus" Type="money" />
+    <Property Name="applicable" Type="money" />
+    <Property Name="responsibilityAllowance" Type="money" />
+    <Property Name="pension" Type="money" />
+    <Property Name="tax" Type="money" />
+    <Property Name="total" Type="money" />
+  </EntityType>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="facultyId" Type="int" />
+    <Property Name="departmentName" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="emContiss">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="contissID" Type="int" Nullable="false" />
+    <Property Name="employeeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="emConuass">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employeeID" Type="int" Nullable="false" />
+    <Property Name="conuassID" Type="int" />
+  </EntityType>
+  <EntityType Name="emlevel">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employeeid" Type="int" />
+    <Property Name="levelid" Type="int" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="lastname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="othername" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tel" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="address" Type="text" Nullable="false" />
+    <Property Name="nKName" Type="varchar" MaxLength="30" />
+    <Property Name="nKTel" Type="varchar" MaxLength="12" />
+    <Property Name="nKRelationship" Type="varchar" MaxLength="10" />
+    <Property Name="nKaddress" Type="text" />
+    <Property Name="nKEmail" Type="varchar" MaxLength="100" />
+    <Property Name="departmentID" Type="int" />
+    <Property Name="category" Type="varchar" MaxLength="20" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="gender" Type="varchar" MaxLength="10" />
+    <Property Name="status" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="emrank">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employeeid" Type="int" Nullable="false" />
+    <Property Name="rankid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="emStep">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stepid" Type="int" />
+    <Property Name="employeeID" Type="int" />
+  </EntityType>
+  <EntityType Name="faculty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FacultyName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="level">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="levelname" Type="int" />
+  </EntityType>
+  <EntityType Name="nCONTISS">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="level" Type="int" />
+    <Property Name="step" Type="int" />
+    <Property Name="basicSalary" Type="money" />
+    <Property Name="hazard" Type="money" />
+    <Property Name="OA" Type="money" />
+    <Property Name="tax" Type="money" />
+    <Property Name="pension" Type="money" />
+    <Property Name="total" Type="money" />
+  </EntityType>
+  <EntityType Name="nCONUASS">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="level" Type="int" />
+    <Property Name="step" Type="int" />
+    <Property Name="basicSalary" Type="money" />
+    <Property Name="hazard" Type="money" />
+    <Property Name="EWA" Type="money" />
+    <Property Name="responsibilityAllowance" Type="money" />
+    <Property Name="pension" Type="money" />
+    <Property Name="tax" Type="money" />
+    <Property Name="total" Type="money" />
+  </EntityType>
+  <EntityType Name="payslip">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employeeID" Type="int" Nullable="false" />
+    <Property Name="salaryid" Type="int" />
+  </EntityType>
+  <EntityType Name="ranks">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="rankName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Salary">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employeeid" Type="int" Nullable="false" />
+    <Property Name="salary" Type="real" />
+    <Property Name="EWA" Type="real" />
+    <Property Name="total" Type="real" />
+    <Property Name="OA" Type="real" />
+    <Property Name="HA" Type="real" />
+    <Property Name="RA" Type="real" />
+    <Property Name="HW" Type="real" />
+    <Property Name="bonus" Type="real" />
+  </EntityType>
+  <EntityType Name="salaryContractor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="contractorID" Type="int" Nullable="false" />
+    <Property Name="hoursWorked" Type="int" Nullable="false" />
+    <Property Name="pay" Type="real" Nullable="false" />
+    <Property Name="bonus" Type="real" />
+  </EntityType>
+  <EntityType Name="step">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stepname" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="conConid">
+    <End Role="nCONUASS" Type="Self.nCONUASS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="emConuass" Type="Self.emConuass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nCONUASS">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emConuass">
+        <PropertyRef Name="conuassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="conID">
+    <End Role="nCONTISS" Type="Self.nCONTISS" Multiplicity="1" />
+    <End Role="emContiss" Type="Self.emContiss" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nCONTISS">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emContiss">
+        <PropertyRef Name="contissID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="conidS">
+    <End Role="Contractor" Type="Self.Contractor" Multiplicity="1" />
+    <End Role="salaryContractor" Type="Self.salaryContractor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contractor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="salaryContractor">
+        <PropertyRef Name="contractorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="dpID">
+    <End Role="department" Type="Self.department" Multiplicity="0..1" />
+    <End Role="employee" Type="Self.employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="employee">
+        <PropertyRef Name="departmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emCID">
+    <End Role="employee" Type="Self.employee" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Contractor" Type="Self.Contractor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Contractor">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emEMid">
+    <End Role="employee" Type="Self.employee" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="emConuass" Type="Self.emConuass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emConuass">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emID">
+    <End Role="employee" Type="Self.employee" Multiplicity="1" />
+    <End Role="emContiss" Type="Self.emContiss" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emContiss">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emidemlevel">
+    <End Role="employee" Type="Self.employee" Multiplicity="0..1" />
+    <End Role="emlevel" Type="Self.emlevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emlevel">
+        <PropertyRef Name="employeeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emidpayslip">
+    <End Role="employee" Type="Self.employee" Multiplicity="1" />
+    <End Role="payslip" Type="Self.payslip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="payslip">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emIDsal">
+    <End Role="employee" Type="Self.employee" Multiplicity="1" />
+    <End Role="Salary" Type="Self.Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Salary">
+        <PropertyRef Name="employeeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="empid">
+    <End Role="employee" Type="Self.employee" Multiplicity="1" />
+    <End Role="emrank" Type="Self.emrank" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emrank">
+        <PropertyRef Name="employeeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="empidid">
+    <End Role="employee" Type="Self.employee" Multiplicity="0..1" />
+    <End Role="emStep" Type="Self.emStep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emStep">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="faID">
+    <End Role="faculty" Type="Self.faculty" Multiplicity="0..1" />
+    <End Role="department" Type="Self.department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="faculty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="department">
+        <PropertyRef Name="facultyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="levevlid">
+    <End Role="level" Type="Self.level" Multiplicity="0..1" />
+    <End Role="emlevel" Type="Self.emlevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="level">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emlevel">
+        <PropertyRef Name="levelid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="rankIDr">
+    <End Role="ranks" Type="Self.ranks" Multiplicity="1" />
+    <End Role="emrank" Type="Self.emrank" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ranks">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emrank">
+        <PropertyRef Name="rankid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="salid">
+    <End Role="Salary" Type="Self.Salary" Multiplicity="0..1" />
+    <End Role="payslip" Type="Self.payslip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salary">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="payslip">
+        <PropertyRef Name="salaryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="stepidid">
+    <End Role="step" Type="Self.step" Multiplicity="0..1" />
+    <End Role="emStep" Type="Self.emStep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="step">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emStep">
+        <PropertyRef Name="stepid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="euiModelStoreContainer">
+    <EntitySet Name="accountant" EntityType="Self.accountant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="contiss" EntityType="Self.contiss" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contractor" EntityType="Self.Contractor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Conuass" EntityType="Self.Conuass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="emContiss" EntityType="Self.emContiss" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="emConuass" EntityType="Self.emConuass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="emlevel" EntityType="Self.emlevel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="employee" EntityType="Self.employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="emrank" EntityType="Self.emrank" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="emStep" EntityType="Self.emStep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="faculty" EntityType="Self.faculty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="level" EntityType="Self.level" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="nCONTISS" EntityType="Self.nCONTISS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="nCONUASS" EntityType="Self.nCONUASS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="payslip" EntityType="Self.payslip" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ranks" EntityType="Self.ranks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Salary" EntityType="Self.Salary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="salaryContractor" EntityType="Self.salaryContractor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="step" EntityType="Self.step" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="conConid" Association="Self.conConid">
+      <End Role="nCONUASS" EntitySet="nCONUASS" />
+      <End Role="emConuass" EntitySet="emConuass" />
+    </AssociationSet>
+    <AssociationSet Name="conID" Association="Self.conID">
+      <End Role="nCONTISS" EntitySet="nCONTISS" />
+      <End Role="emContiss" EntitySet="emContiss" />
+    </AssociationSet>
+    <AssociationSet Name="conidS" Association="Self.conidS">
+      <End Role="Contractor" EntitySet="Contractor" />
+      <End Role="salaryContractor" EntitySet="salaryContractor" />
+    </AssociationSet>
+    <AssociationSet Name="dpID" Association="Self.dpID">
+      <End Role="department" EntitySet="department" />
+      <End Role="employee" EntitySet="employee" />
+    </AssociationSet>
+    <AssociationSet Name="emCID" Association="Self.emCID">
+      <End Role="employee" EntitySet="employee" />
+      <End Role="Contractor" EntitySet="Contractor" />
+    </AssociationSet>
+    <AssociationSet Name="emEMid" Association="Self.emEMid">
+      <End Role="employee" EntitySet="employee" />
+      <End Role="emConuass" EntitySet="emConuass" />
+    </AssociationSet>
+    <AssociationSet Name="emID" Association="Self.emID">
+      <End Role="employee" EntitySet="employee" />
+      <End Role="emContiss" EntitySet="emContiss" />
+    </AssociationSet>
+    <AssociationSet Name="emidemlevel" Association="Self.emidemlevel">
+      <End Role="employee" EntitySet="employee" />
+      <End Role="emlevel" EntitySet="emlevel" />
+    </AssociationSet>
+    <AssociationSet Name="emidpayslip" Association="Self.emidpayslip">
+      <End Role="employee" EntitySet="employee" />
+      <End Role="payslip" EntitySet="payslip" />
+    </AssociationSet>
+    <AssociationSet Name="emIDsal" Association="Self.emIDsal">
+      <End Role="employee" EntitySet="employee" />
+      <End Role="Salary" EntitySet="Salary" />
+    </AssociationSet>
+    <AssociationSet Name="empid" Association="Self.empid">
+      <End Role="employee" EntitySet="employee" />
+      <End Role="emrank" EntitySet="emrank" />
+    </AssociationSet>
+    <AssociationSet Name="empidid" Association="Self.empidid">
+      <End Role="employee" EntitySet="employee" />
+      <End Role="emStep" EntitySet="emStep" />
+    </AssociationSet>
+    <AssociationSet Name="faID" Association="Self.faID">
+      <End Role="faculty" EntitySet="faculty" />
+      <End Role="department" EntitySet="department" />
+    </AssociationSet>
+    <AssociationSet Name="levevlid" Association="Self.levevlid">
+      <End Role="level" EntitySet="level" />
+      <End Role="emlevel" EntitySet="emlevel" />
+    </AssociationSet>
+    <AssociationSet Name="rankIDr" Association="Self.rankIDr">
+      <End Role="ranks" EntitySet="ranks" />
+      <End Role="emrank" EntitySet="emrank" />
+    </AssociationSet>
+    <AssociationSet Name="salid" Association="Self.salid">
+      <End Role="Salary" EntitySet="Salary" />
+      <End Role="payslip" EntitySet="payslip" />
+    </AssociationSet>
+    <AssociationSet Name="stepidid" Association="Self.stepidid">
+      <End Role="step" EntitySet="step" />
+      <End Role="emStep" EntitySet="emStep" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
